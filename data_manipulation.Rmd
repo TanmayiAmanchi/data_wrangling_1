@@ -74,6 +74,19 @@ filter(litters_df, group %in% c("Con7","Mod8"))
 ```
 
 
+## Mutate
+Modify an existing variable or create new variable
+
+```{r}
+# Convert the weight columns to numeric
+litters_df <- litters_df %>%
+    mutate(gd0_weight = as.numeric(gd0_weight),
+           gd18_weight = as.numeric(gd18_weight))
+# Create wt_gain column
+mutate(litters_df, 
+       wt_gain = gd18_weight - gd0_weight,
+       group= str_to_lower(group))
+```
 
 
 
