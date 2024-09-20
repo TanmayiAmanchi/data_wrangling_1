@@ -158,6 +158,14 @@ litters_base = read.csv("./data_import_examples/FAS_litters.csv")
 litters_readr = read.csv("./data_import_examples/FAS_litters.csv")
 ```
 
+## Exporting data
+
+Export the mlb sub table
+
+``` r
+write_csv(mlb_df,"./data_import_examples/mlb_subtable.csv")
+```
+
 \#Import FAS Pups File pups_df = read_csv(file =
 “./data_import_examples/FAS_pups.csv”) pups_df = read_csv(file =
 “~/Desktop/Data Science
