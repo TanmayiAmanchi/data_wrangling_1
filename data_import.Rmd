@@ -18,6 +18,20 @@ litters_df = read_csv(file = "./data_import_examples/FAS_litters.csv")
 litters_df = janitor::clean_names(litters_df)
 ```
 ##Take a look at the data
+Printing in the console
+```{r}
+litters_df
+```
+```{r}
+tail(litters_df)
+```
+```{r}
+skimr::skim(litters_df)
+```
+
+
+## Options to read_csv
+checkout '?read_csv() for more information.
 
 
 
