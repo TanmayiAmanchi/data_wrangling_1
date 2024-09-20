@@ -20,6 +20,7 @@ library(tidyverse)
 
 ``` r
 library (readxl)
+library (haven)
 ```
 
 \##Read in some data
@@ -141,6 +142,21 @@ mlb_df
     ## 4 Kansas City Royals    730    5672  1560      129   0.275
     ## 5 St. Louis Cardinals   762    5532  1513      162   0.273
     ## 6 New York Mets         718    5600  1477      108   0.264
+
+Read in a SAS file
+
+``` r
+pulse_df = read_sas("./data_import_examples/public_pulse_data.sas7bdat")
+```
+
+## Comparison with Base R
+
+What about read.csv?
+
+``` r
+litters_base = read.csv("./data_import_examples/FAS_litters.csv")
+litters_readr = read.csv("./data_import_examples/FAS_litters.csv")
+```
 
 \#Import FAS Pups File pups_df = read_csv(file =
 “./data_import_examples/FAS_pups.csv”) pups_df = read_csv(file =
