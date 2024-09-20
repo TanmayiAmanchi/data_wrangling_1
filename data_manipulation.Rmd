@@ -7,3 +7,10 @@ this is the repository for data wrangling 1 part of P8105
 ```{r setup}
 library(tidyverse)
 ```
+
+## Load in the FAS Litters Data
+```{r}
+litters_df = read_csv("./data_import_examples/FAS_litters.csv")
+litters_df = janitor::clean_names(litters_df)
+```
+
