@@ -1,0 +1,27 @@
+---
+title: "Data Import"
+output: github_document
+---
+this is the respository for data wrangling 1 part of P8105
+
+```{r setup}
+library(tidyverse)
+```
+
+##Read in some data
+
+Read in the litters data set and re name it. This document will show how to import data.
+
+#Import the FAS Litters CSV
+```{r}
+litters_df = read_csv(file = "./data_import_examples/FAS_litters.csv")
+litters_df = janitor::clean_names(litters_df)
+```
+##Take a look at the data
+
+
+
+#Import FAS Pups File
+pups_df = read_csv(file = "./data_import_examples/FAS_pups.csv")
+pups_df = read_csv(file = "~/Desktop/Data Science 1/data_wrangling_1/data_import_examples/FAS_litters.csv")
+
