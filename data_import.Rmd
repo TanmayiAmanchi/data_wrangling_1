@@ -6,6 +6,7 @@ this is the respository for data wrangling 1 part of P8105
 
 ```{r setup}
 library(tidyverse)
+library (readxl)
 ```
 
 ##Read in some data
@@ -33,9 +34,20 @@ skimr::skim(litters_df)
 ## Options to read_csv
 checkout '?read_csv() for more information.
 
+## Other file formats
+Read in an excel file.
+
+```{r}
+mlb_df = read_excel("./data_import_examples/mlb11.xlsx", range = "A1:F7")
+mlb_df
+```
 
 
 #Import FAS Pups File
 pups_df = read_csv(file = "./data_import_examples/FAS_pups.csv")
 pups_df = read_csv(file = "~/Desktop/Data Science 1/data_wrangling_1/data_import_examples/FAS_litters.csv")
+
+
+
+
 
